@@ -129,7 +129,7 @@ void menu()
 }
 int main()
 {
-    setlocale(LC_ALL, "pt_BR.UTF-8"); //aaaaaaaaaaa só falta funcionar essa disgraça
+    setlocale(LC_ALL, "pt_BR.UTF-8"); 
 
     No* raiz = inicializar_arvore(); //inicializa a árvore 
     int opc = 0;
@@ -179,7 +179,7 @@ int main()
         }
     }
 
-    printf("Saindo...");
+    printf("Saindo...\n");
     liberar_arvore(raiz);
     return 0;
 }

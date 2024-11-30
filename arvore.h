@@ -1,6 +1,6 @@
 #ifndef ARVORE_H
 #define ARVORE_H
-#include "no.c"
+#include "no.h"
 
 
 No *inicializar_arvore();

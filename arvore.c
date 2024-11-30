@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "no.c"
+#include "arvore.h"
 
 
 No *inicializar_arvore() 
@@ -9,7 +9,7 @@ No *inicializar_arvore()
     return NULL; // árvore vazia
 }
 
-void inserir_livro(No** raiz, Livro livro) 
+void inserir_livro(No** raiz, Livro livro) //precisa ser ponteiro para ponteiro pq só assim podemos mudar o endereço da raiz
 {
     if (*raiz == NULL) //se a árvore está vazia cria o nó e define como raiz
     {

@@ -39,11 +39,22 @@ int main()
                 break;
 
             case 2:
-                printf("Digite os dados do livro (código, título, autor, gênero, ano, editora, páginas):\n");
-                scanf("%d%99s%99s%49s%d%99s%d",
-                      &novo_livro.codigo, novo_livro.titulo, novo_livro.autor,
-                      novo_livro.genero, &novo_livro.ano, novo_livro.editora,
-                      &novo_livro.num_paginas);
+                printf("Digite os dados do livro :\n");
+                printf("Digite o código:");                
+                scanf("%d", &novo_livro.codigo);
+                printf("Digite o título:");                
+                scanf(" %99s", &novo_livro.titulo);
+                printf("Digite o autor:");                
+                scanf("%99s", &novo_livro.autor);
+                printf("Digite o gênero:");    
+                scanf("%49s", &novo_livro.genero);
+                printf("Digite o ano:");  
+                scanf("%d", &novo_livro.ano);
+                printf("Digite a editora:");                
+                scanf("%99s", &novo_livro.editora);
+                printf("Digite o número de páginas:");                
+                scanf("%d", &novo_livro.num_paginas);
+
                 inserir_livro(&raiz, novo_livro);
                 break;
 
@@ -55,7 +66,14 @@ int main()
                 break;
 
             case 4:
+                if(raiz == NULL)
+                {
+                    printf("No momento não há livros armazenados na biblioteca!");
+                }
+                else
+                {
                 exibir_arvore(raiz);
+                }
                 break;
             case 5:
                 opc = 6;

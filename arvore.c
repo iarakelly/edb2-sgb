@@ -35,7 +35,7 @@ void buscar_por_genero(No* raiz, char genero[])
     {
         buscar_por_genero(raiz->E, genero); //busca primeiro na subárvore esqueda
 
-        if (strcmp(raiz->livro.genero, genero) == 0)  //strcmp é usada para comparar duas strings, se as strings forem iguais ela vai retornar 0
+        if (strcasecmp(raiz->livro.genero, genero) == 0)  //strcmp é usada para comparar duas strings, se as strings forem iguais ela vai retornar 0
         {
             printf("Código: %d, Título: %s, Autor: %s, Gênero: %s, Ano: %d, Editora: %s, Páginas: %d\n",
                    raiz->livro.codigo, raiz->livro.titulo, raiz->livro.autor, raiz->livro.genero,
@@ -83,6 +83,8 @@ void carregar_livros(char* biblioteca, No** raiz)
     }//esse while fica executando enquanto tiver linha para ler
 
     fclose(arquivo); // fecha o arquivo
+
+    printf("Livros carregados com sucesso!");
 }
 
 void exibir_arvore(No* raiz) 
